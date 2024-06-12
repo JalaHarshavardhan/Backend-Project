@@ -154,3 +154,16 @@ function search(col, it, res) {
     }
 }
 ```
+### Search by author
+// Inside the public router definition
+
+public.get('/author/:author', function(req, res) {
+    return search('author', req.params['author'], res)
+});
+
+### Search by Title
+// Inside the public router definition
+
+public.get('/title/:title', function(req, res) {
+    return search('title', req.params['title'], res)
+});
